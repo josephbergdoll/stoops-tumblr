@@ -2,7 +2,7 @@
   .post-title {
     border-top: $border-black-thicker;
     margin: 0 0 1.5rem;
-    padding: 0.25rem 0 0 0;
+    padding: 0.45rem 0 0 0;
     @include media($large-only) {
       border-top: $border-black-thickest;
       padding: 0.5rem 0 0 0;

@@ -57,6 +57,15 @@ img {
   height: auto;
 }
 
+picture {
+  display: block;
+  >img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
 strong {
   font-weight: $type-bold;
 }
