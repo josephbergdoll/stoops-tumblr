@@ -1,6 +1,8 @@
 .single-post {
-
   margin: 0 auto 2rem;
+  @include media($large-up) {
+    margin: 0 auto 3rem;
+  }
   
   .post-inner {
 
@@ -23,6 +25,7 @@
     padding-top: 0.75rem;
     .reblog_button, .like_button {
       display: inline-block !important;
+      cursor: pointer;
       @include transition(opacity $hover-out ease-out);
       &:hover {
         opacity: 0.5;

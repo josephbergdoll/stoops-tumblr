@@ -2,7 +2,7 @@
 // Type Styles
 
 $serif: "Times New Roman", Times, serif;
-$sans: "Helvetica Neue", Arial, Helvetica, sans-serif;
+$sans: "Haas Grot Disp", "Helvetica Neue", Arial, Helvetica, sans-serif;
 
 $type-black: 800;
 $type-bold: 700;
@@ -50,9 +50,10 @@ $black-dark-transparent: rgba(0,0,0,0.8);
 $standard-bumper: 1rem;
 $standard-border: 1px solid $grey-border;
 $border-black: 1px solid $light-black;
-$border-midblack-thick: 2px solid $mid-black;
-$border-black-thick: 2px solid $black;
-$border-black-thicker: 4px solid $black;
+$border-lightblack-thick: 0.125rem solid $light-black;
+$border-black-thick: 0.125rem solid $black;
+$border-black-thicker: 0.25rem solid $black;
+$border-black-thickest: 0.375rem solid $black;
 $border-trans: 1px solid transparent;
 $border-white: 1px solid $white;
 $standard-border-solid: 1px solid $grey-border-solid;

@@ -12,6 +12,9 @@ html {
   overflow-x:hidden;
   background: $dark-black;
   font-size: 16px;
+  @include media($xxlarge) {
+    font-size: 20px;
+  }
 }
 
 body {
@@ -22,6 +25,9 @@ body {
   font-weight: $type-book;
   background: $white;
   color: $black;
+  @include media($medium-up) {
+    border-top: 28px solid $black;
+  }
 }
 
 ::selection {
@@ -72,4 +78,13 @@ a {
   display: block;
   @extend %hide-text;
   background-repeat: no-repeat;
+}
+
+#tumblr_controls {
+  opacity: 0.5 !important;
+  @include transition(opacity $short-transition ease-out);
+  &:hover {
+    opacity: 1 !important;
+    @include transition(opacity $hover-out ease-out);
+  }
 }

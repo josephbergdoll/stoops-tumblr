@@ -1,17 +1,22 @@
 // Styleguide
 
 %sg-h1 {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  line-height: 1.1;
   font-weight: $type-bold;
+  @extend %ot-settings;
   @include media($large-up) {
-    font-size: 2.5rem;
-    letter-spacing: -1px;
+    font-size: 3rem;
+  }
+  @include media($xlarge-up) {
+    font-size: 3.5rem;
   }
 }
 
 %sg-h2 {
   font-size: 1rem;
   font-weight: $type-bold;
+  @extend %ot-settings;
   @include media($large-up) {
     font-size: 1.75rem;
     letter-spacing: -0.5px;
@@ -27,11 +32,12 @@
 }
 
 %sg-h5 {
-  font-size: 0.6875rem;
+  font-size: 0.6rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: $text-mid-grey;
   font-weight: $type-book;
+  @extend %ot-settings;
 }
 
 %sg-h6 {
@@ -102,4 +108,5 @@ h6 {
 
 p {
   @extend %sg-body-copy !optional;
+  max-width: 60rem;
 }

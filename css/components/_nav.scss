@@ -18,12 +18,15 @@
     }
   }
   a {
+    font-weight: $type-bold;
     @include media($medium-up) {
       display: block;
-      border-top: $border-midblack-thick;
+      border-top: $border-lightblack-thick;
       padding: 0.25rem 0 0.35rem;
       font-weight: $type-bold;
       font-size: 0.875rem;
+      letter-spacing: 0.03em;
+      color: $dark-black;
       @include transition(all $hover-out ease-out);
       &:hover {
         border-top: $border-black-thick;

@@ -49,7 +49,7 @@
           <div class='post-inner'>
             {block:Text}
             {block:Title}
-            <h1>
+            <h1 class='post-title'>
               <a class='permalink' href='{URL}' title='Read more of {Title}'>{Title}</a>
             </h1>
             {/block:Title}
@@ -272,7 +272,9 @@
   </div>
   <footer>
     <div class='wrapper'>
-      {CopyrightYears}
+      <div class='footer-inner'>
+        {CopyrightYears}
+      </div>
     </div>
   </footer>
 </body>

@@ -52,7 +52,7 @@
             -# Text Post
             {block:Text}
             {block:Title} 
-            %h1
+            %h1.post-title
               %a.permalink{:href => "{URL}", :title => "Read more of {Title}"} {Title}
             {/block:Title}
             {block:Body}
@@ -253,5 +253,6 @@
 
   %footer
     .wrapper
-      {CopyrightYears}
+      .footer-inner
+        {CopyrightYears}
 </html>
