@@ -1,0 +1,75 @@
+// Base Styles
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  overflow-x:hidden;
+  background: $dark-black;
+  font-size: 16px;
+}
+
+body {
+  line-height: 1.5;
+  width: 100%;
+  -webkit-tap-highlight-color: black;
+  font-family: $sans;
+  font-weight: $type-book;
+  background: $white;
+  color: $black;
+}
+
+::selection {
+  background: $light-white;
+  color: $text-grey-paragraph;
+}
+
+::-moz-selection {
+  background: $light-white;
+  color: $text-grey-paragraph;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+strong {
+  font-weight: $type-bold;
+}
+
+em {
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#page {
+  @include transition(all $short-transition $cubic-ease);
+}
+
+.logo {
+  display: block;
+  @extend %hide-text;
+  background-repeat: no-repeat;
+}

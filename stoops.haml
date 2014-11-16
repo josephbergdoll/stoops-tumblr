@@ -1,4 +1,4 @@
-!!!
+!!! 5
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
@@ -23,11 +23,12 @@
   %link{:rel => "apple-touch-icon", :href => "{PortraitURL-128}"}/
 
   / CSS
-  -# %link{:rel => "stylesheet", :href => "your stylesheet link", :type => "text/css", :media => "screen"}/
+  %link{:rel => "stylesheet", :href => "https://www.dropbox.com/s/ldod27nr7wb574j/main.css?dl=1", :type => "text/css", :media => "screen"}/
 
   / JS
   %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js", :type => "text/javascript"}
-  -# %script{:src => "your script link", :type => "text/javascript"}
+  %script{:src => "https://www.dropbox.com/s/efmxwdr7xqlewla/plugins-min.js?dl=1", :type => "text/javascript"}
+  %script{:src => "https://www.dropbox.com/s/6uj4trpzwh2c7yg/scripts-min.js?dl=1", :type => "text/javascript"}
 
 %body
   %header
@@ -45,18 +46,32 @@
   #page-content
     .wrapper
       .posts
+        .pagination-top.clearfix
+          %h2 The Latest
+          {block:Pagination}
+          .pagination-nextprev
+            {block:PreviousPage}
+            %a{:href => "{PreviousPage}"} Next
+            {/block:PreviousPage}
+            {block:NextPage}
+            %a{:href => "{NextPage}"} Next
+            {/block:NextPage}
+          {/block:Pagination}
         {block:Posts}
         %article{:class => "single-post {PostType} {TagsAsClasses}"}
           .post-inner
             -# Text Post
             {block:Text}
             {block:Title} 
-            %h2
-              %a.permalink{:href => "{URL}"} {Title}
+            %h1
+              %a.permalink{:href => "{URL}", :title => "Read more of {Title}"} {Title}
             {/block:Title}
             {block:Body}
             .text-post-body
               {Body}
+              {block:More}
+              %a{:href => "{URL}", :title => "Read more of {Title}"} Read More
+              {/block:More}
             {/block:Body}
             {/block:Text}
             
@@ -165,7 +180,7 @@
               %li{:class => "{Alt}"}
                 {block:Label}
                 .person
-                  %h4 {Label
+                  %h4 {Label}
                 {/block:Label}
                 .line 
                   %p {Line}
@@ -237,9 +252,22 @@
             .post-interact
               {ReblogButton color="grey"}
               {LikeButton color="grey"}
-
+        
         {/block:Posts}
+        .pagination-bottom.clearfix
+          {block:Pagination}
+          .pagination-numbers
+          %h5 {CurrentPage} / {TotalPages}
+          .pagination-nextprev
+            {block:PreviousPage}
+            %a{:href => "{PreviousPage}"} Next
+            {/block:PreviousPage}
+            {block:NextPage}
+            %a{:href => "{NextPage}"} Next
+            {/block:NextPage}
+          {/block:Pagination}
 
   %footer
     .wrapper
       {CopyrightYears}
+</html>

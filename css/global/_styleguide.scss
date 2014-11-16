@@ -1,0 +1,105 @@
+// Styleguide
+
+%sg-h1 {
+  font-size: 1.5rem;
+  font-weight: $type-bold;
+  @include media($large-up) {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+  }
+}
+
+%sg-h2 {
+  font-size: 1rem;
+  font-weight: $type-bold;
+  @include media($large-up) {
+    font-size: 1.75rem;
+    letter-spacing: -0.5px;
+  }
+}
+
+%sg-h3 {
+
+}
+
+%sg-h4 {
+  
+}
+
+%sg-h5 {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $text-mid-grey;
+  font-weight: $type-book;
+}
+
+%sg-h6 {
+  
+}
+
+%sg-body-copy {
+  font-family: $serif;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: $text-grey-paragraph;
+  @include media($medium-up) {
+    font-size: 1rem;
+  }
+  @include media($xlarge-up) {
+    font-size: 1.125rem;
+  }
+}
+
+.text-link {
+  &.text-link-small {
+  }
+  &.link-active {
+  }
+}
+
+a.text-link {
+  @include transition(color $hover-out ease-out);
+  &:hover {
+    cursor: pointer;
+    @include transition(color $hover-in ease-out);
+  }
+}
+
+.nav-link {
+  &.nav-link-big {
+  }
+  &.nav-link-medium {
+  }
+  &.nav-link-small {
+  }
+}
+
+
+h1 {
+  @extend %sg-h1 !optional;
+}
+
+h2 {
+  @extend %sg-h2 !optional;
+}
+
+h3 {
+  @extend %sg-h3 !optional;
+}
+
+h4 {
+  @extend %sg-h4 !optional;
+}
+
+h5 {
+  @extend %sg-h5 !optional;
+}
+
+h6 {
+  @extend %sg-h6 !optional;
+}
+
+p {
+  @extend %sg-body-copy !optional;
+}

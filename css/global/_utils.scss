@@ -1,0 +1,49 @@
+.padded-border-top {
+  padding-top: 1.5rem;
+  border-top: $standard-border;
+  padding-bottom: 1.5rem;
+  @include media($large-up) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.underline-grey {
+  border-bottom: $standard-border;
+}
+
+.empty-state {
+  width: 100%;
+  color: $dark-grey;
+  text-align: center;
+  font-size: 0.875rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.center {
+  text-align: center;
+}
+
+.capitalize {
+  text-transform: capitalize !important;
+}
+
+.lowercase {
+  text-transform: lowercase !important;
+}
+
+.mast {
+  padding: 2rem 0 0;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.spaced-caps {
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.no-padding {
+  padding: 0 !important;
+}

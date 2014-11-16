@@ -1,0 +1,22 @@
+// Checkout font-style: 
+
+@font-face {
+  font-family: 'futura-pt';
+  @include font-file(futura-light);
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'futura-pt';
+  @include font-file(futura-book);
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'futura-pt';
+  @include font-file(futura-bold);
+  font-style: normal;
+  font-weight: 700;
+}

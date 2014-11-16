@@ -1,0 +1,73 @@
+
+// Type Styles
+
+$serif: "Times New Roman", Times, serif;
+$sans: "Helvetica Neue", Arial, Helvetica, sans-serif;
+
+$type-black: 800;
+$type-bold: 700;
+$type-medium: 500;
+$type-book: 400;
+$type-light: 300;
+
+// Colors
+$white: white;
+$black: black;
+
+$red: #f04242;
+$red-dark: darken($red, 10%);
+
+$lightest-white: #fbfbfb;
+$lighter-white: #f8f8f8;
+$light-white: #f3f3f3;
+
+$white-transparent: rgba(255,255,255,0.5);
+$white-mid-transparent: rgba(255,255,255,0.7);
+$white-dark-transparent: rgba(255,255,255,0.8);
+
+$grey-border: rgba(0,0,0,0.1);
+$grey-border-solid: #e5e5e5;
+
+$light-grey: #eee;
+$mid-grey: #ddd;
+$dark-grey: #ccc;
+
+$text-light-grey: #aaaaaa;
+$text-mid-grey: #979797;
+$text-dark-grey: #777;
+$text-grey-paragraph: #58595b;
+
+$light-black: #414042;
+$mid-black: #333;
+$dark-black: #232323;
+
+$black-light-transparent: rgba(0,0,0,0.25);
+$black-transparent: rgba(0,0,0,0.5);
+$black-mid-transparent: rgba(0,0,0,0.7);
+$black-dark-transparent: rgba(0,0,0,0.8);
+
+//Sizes
+$standard-bumper: 1rem;
+$standard-border: 1px solid $grey-border;
+$border-black: 1px solid $light-black;
+$border-trans: 1px solid transparent;
+$border-white: 1px solid $white;
+$standard-border-solid: 1px solid $grey-border-solid;
+
+// Speeds
+$hover-in: 200ms;
+$hover-out: 250ms;
+$short-transition: 400ms;
+$mid-transition: 600ms;
+$long-transition: 800ms;
+$longest-transition: 1200ms;
+
+$cubic-ease: cubic-bezier(0.47, 0, 0, 0.95);
+
+// Animations
+
+@include keyframes(loader) {
+  0% { opacity: 0; }
+  75% { opacity: 1; }
+  100% { opacity: 0; }
+}
