@@ -10,7 +10,7 @@ html {
   height: 100%;
   -webkit-text-size-adjust: 100%;
   overflow-x:hidden;
-  background: $dark-black;
+  background: $white;
   font-size: 16px;
   @include media($xxlarge) {
     font-size: 20px;
@@ -25,9 +25,6 @@ body {
   font-weight: $type-book;
   background: $white;
   color: $black;
-  @include media($medium-up) {
-    border-top: 28px solid $black;
-  }
 }
 
 ::selection {
@@ -85,11 +82,12 @@ a {
 
 .logo {
   display: block;
-  @extend %hide-text;
+  // @extend %hide-text;
   background-repeat: no-repeat;
 }
 
 #tumblr_controls {
+  -webkit-filter: invert(100%);
   opacity: 0.5 !important;
   @include transition(opacity $short-transition ease-out);
   &:hover {

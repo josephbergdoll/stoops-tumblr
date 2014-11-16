@@ -6,10 +6,12 @@
   padding: 0 0.675rem;
   @include transition(padding $long-transition ease-in-out);
   @include media($large-only) {
-    padding: 0 4rem;
+    width: 80%;
+    padding: 0 1rem;
   }
   @include media($xlarge-up) {
-    padding: 0 8rem;
+    width: 75%;
+    padding: 0 1rem;
   }
   &.collapse-small {
     padding: 0;

@@ -111,11 +111,6 @@ html {
     opacity: 1; }
   100% {
     opacity: 0; } }
-.logo {
-  text-indent: 120%;
-  white-space: nowrap;
-  overflow: hidden; }
-
 .single-post.text .text-post-body:after {
   content: "";
   display: table;
@@ -137,7 +132,7 @@ html {
   height: 100%;
   -webkit-text-size-adjust: 100%;
   overflow-x: hidden;
-  background: #232323;
+  background: white;
   font-size: 16px; }
   @media screen and (min-width: 1800px) {
     html {
@@ -151,9 +146,6 @@ body {
   font-weight: 400;
   background: white;
   color: black; }
-  @media screen and (min-width: 768px) {
-    body {
-      border-top: 28px solid black; } }
 
 ::selection {
   background: #f3f3f3;
@@ -204,6 +196,7 @@ a {
   background-repeat: no-repeat; }
 
 #tumblr_controls {
+  -webkit-filter: invert(100%);
   opacity: 0.5 !important;
   -webkit-transition: opacity 400ms ease-out;
   -moz-transition: opacity 400ms ease-out;
@@ -320,10 +313,12 @@ p {
     clear: both; }
   @media screen and (min-width: 1024px) and (max-width: 1279px) {
     .wrapper {
-      padding: 0 4rem; } }
+      width: 80%;
+      padding: 0 1rem; } }
   @media screen and (min-width: 1280px) {
     .wrapper {
-      padding: 0 8rem; } }
+      width: 75%;
+      padding: 0 1rem; } }
   .wrapper.collapse-small {
     padding: 0; }
     @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -424,6 +419,30 @@ p {
     .no-small {
       display: block; } }
 
+.header-main .logo {
+  width: 18rem;
+  margin: 2rem auto 3rem; }
+  .header-main .logo svg {
+    max-width: 98%;
+    margin: 0 auto;
+    height: auto;
+    display: block; }
+    .header-main .logo svg > path {
+      fill: #fff;
+      stroke-width: 3px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke: #000;
+      -webkit-transition: all 250ms ease-out;
+      -moz-transition: all 250ms ease-out;
+      transition: all 250ms ease-out; }
+  .header-main .logo:hover svg > path {
+    fill: #000;
+    stroke-width: 0px;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    transition: all 200ms ease-out; }
+
 .pagination-block {
   text-align: center;
   position: relative; }
@@ -521,3 +540,5 @@ p {
   .single-post.text .text-post-body img {
     display: block;
     margin: 2rem 0; }
+  .single-post.text .text-post-body p.img-only {
+    max-width: none; }

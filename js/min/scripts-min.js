@@ -1,1 +1,1 @@
-scripts.js;
+$(document).ready(function(){$(".text-post-body p").each(function(){$(this).addClass($(this).find("img").length&&!$.trim($(this).text()).length?"img-only":"no-img")})});

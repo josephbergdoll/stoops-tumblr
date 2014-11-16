@@ -1,0 +1,27 @@
+.header-main {
+  .logo {
+    width: 18rem;
+    margin: 2rem auto 3rem;
+    svg {
+      max-width: 98%;
+      margin: 0 auto;
+      height: auto;
+      display: block;
+      >path {
+        fill: #fff;
+        stroke-width: 3px;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke: #000;
+        @include transition(all $hover-out ease-out);
+      }
+    }
+    &:hover {
+      svg>path {
+        fill: #000;
+        stroke-width: 0px;
+        @include transition(all $hover-in ease-out);
+      }
+    }
+  }
+}
