@@ -1,0 +1,245 @@
+!!!
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+
+%head
+  %title {Title}
+
+  %meta{:charset => "utf-8"}
+  {block:Description}
+  %meta{:name => "description", :content => "{MetaDescription}"}
+  {/block:Description}
+  %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"}
+
+  %link{:rel => "canonical", :href => "{block:IndexPage}{BlogURL}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}"}/
+  %link{:rel => "alternate", :type => "application/rss+xml", :href => "{RSS}"}
+
+  / Favicon
+  %link{:rel => "shortcut icon", :href => "{Favicon}", :type => "image/x-icon"}/
+  %link{:rel => "icon", :href => "{Favicon}", :type => "image/x-icon"}/
+  %link{:rel => "apple-touch-icon", :href => "{PortraitURL-128}"}/
+
+  / CSS
+  -# %link{:rel => "stylesheet", :href => "your stylesheet link", :type => "text/css", :media => "screen"}/
+
+  / JS
+  %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js", :type => "text/javascript"}
+  -# %script{:src => "your script link", :type => "text/javascript"}
+
+%body
+  %header
+    .wrapper
+      %a.logo{:href => "{BlogURL}"} {Title}
+      %nav.main-nav
+        %ul
+          {block:HasPages}
+          {block:Pages}
+          %li
+            %a{:href => "{URL}"} {Label}
+          {/block:Pages}
+          {/block:HasPages}
+    
+  #page-content
+    .wrapper
+      .posts
+        {block:Posts}
+        %article{:class => "single-post {PostType} {TagsAsClasses}"}
+          .post-inner
+            -# Text Post
+            {block:Text}
+            {block:Title} 
+            %h2
+              %a.permalink{:href => "{URL}"} {Title}
+            {/block:Title}
+            {block:Body}
+            .text-post-body
+              {Body}
+            {/block:Body}
+            {/block:Text}
+            
+            -# Photo Post
+            {block:Photo}
+            .photo-wrap
+              %picture
+                %source{:media => "(max-width: 500px)", :srcset => "{PhotoURL-500}"}
+                %source{:media => "(min-width: 501px)", :srcset => "{PhotoURL-HighRes}"}
+                %img{:src => "{PhotoURL-HighRes}", :alt => "{PhotoAlt}"}
+              {block:Exif}
+              .exif-trigger
+              .exif-contain
+                %h5 {block:Camera}{Camera}{/block:Camera}{block:FocalLength} / {FocalLength}{/block:FocalLength}{block:Aperture} / {Aperture}{/block:Aperture}{block:Exposure} / {Exposure}{/block:Exposure}{block:ISO} / {ISO}{/block:ISO}
+              {/block:Exif}
+              {block:LinkURL}
+              .clickthrough
+                {LinkOpenTag}{LinkURL}{LinkCloseTag}
+              {/block:LinkURL}
+            {block:Caption}
+            .caption-post-body
+              {Caption}
+            {/block:Caption}
+            {/block:Photo}
+
+            -# Panorama Post
+            {block:Panorama}
+            .photo-wrap
+              %picture
+                %source{:media => "(max-width: 500px)", :srcset => "{PhotoURL-500}"}
+                %source{:media => "(min-width: 501px, max-width:1280px)", :srcset => "{PhotoURL-HighRes}"}
+                %source{:media => "(min-width:1281px)", :srcset => "{PhotoURL-Panorama}"}
+                %img{:src => "{PhotoURL-Panorama}", :alt => "{PhotoAlt}"}
+              {block:Exif}
+              .exif-trigger
+              .exif-contain
+                %h5 {block:Camera}{Camera}{/block:Camera}{block:FocalLength} / {FocalLength}{/block:FocalLength}{block:Aperture} / {Aperture}{/block:Aperture}{block:Exposure} / {Exposure}{/block:Exposure}{block:ISO} / {ISO}{/block:ISO}
+              {/block:Exif}
+              {block:LinkURL}
+              .clickthrough
+                {LinkOpenTag}{LinkURL}{LinkCloseTag}
+              {/block:LinkURL}
+            {block:Caption}
+            .caption-post-body
+              {Caption}
+            {/block:Caption}
+            {/block:Panorama}
+            
+            -# Photoset Post
+            {block:Photoset}
+            .photoset-imgs-wrap
+              .photoset-imgs
+                {block:Photos}
+                .photo-wrap
+                  %picture
+                    %source{:media => "(max-width: 500px)", :srcset => "{PhotoURL-500}"}
+                    %source{:media => "(min-width: 501px)", :srcset => "{PhotoURL-HighRes}"}
+                    %img{:src => "{PhotoURL-HighRes}", :alt => "{PhotoAlt}"}
+                  {block:Exif}
+                  .exif-trigger
+                  .exif-contain
+                    %h5 {block:Camera}{Camera}{/block:Camera}{block:FocalLength} / {FocalLength}{/block:FocalLength}{block:Aperture} / {Aperture}{/block:Aperture}{block:Exposure} / {Exposure}{/block:Exposure}{block:ISO} / {ISO}{/block:ISO}
+                  {/block:Exif}
+                  {block:Caption}
+                  .photo-single-caption
+                    {Caption}
+                  {/block:Caption}
+                {/block:Photos}
+            {block:Caption}
+            .caption-post-body
+              {Caption}
+            {/block:Caption}
+            {/block:Photoset}
+            
+            -# Quote Post
+            {block:Quote}
+            %h1.quote-body {Quote}
+            {block:Source}
+            %h3.quote-source {Source}
+            {/block:Source}
+
+
+            {/block:Quote}
+            
+            -# Link Post
+            {block:Link}
+            %a.link-single{:href => "{URL}", :title => "{Name}", :target => "new"}
+              {block:Thumbnail}
+              {Thumbnail}
+              {/block:Thumbnail}
+              %h2 {Name}
+              %h5 {URL}
+              {block:Description}
+              %p {Description}
+              {/block:Description}
+            {/block:Link}
+
+            -# Chat Post
+            {block:Chat}
+            {block:Title} 
+            %h2
+              %a.permalink{:href => "{URL}"} {Title}
+            {/block:Title}
+            %ul.chat-content-body
+              {block:Lines}
+              %li{:class => "{Alt}"}
+                {block:Label}
+                .person
+                  %h4 {Label
+                {/block:Label}
+                .line 
+                  %p {Line}
+              {/block:Lines}
+            {/block:Chat}
+
+            -# Audio Post
+            {block:Audio}
+            .audio-inner
+              {block:AudioEmbed}
+              .audio-embed
+                {AudioEmbed}
+              {/block:AudioEmbed}
+              {block:AudioPlayer}
+              .audio-player
+                {AudioPlayer}
+              {/block:AudioPlayer}
+              {block:PlayCount}
+              %h5.play-count {PlayCountWithLabel}
+              {/block:PlayCount}
+              {block:TrackName}
+              .audio-info
+                {block:AlbumArt}
+                %img.album-art{:src => "{AlbumArtURL}", :alt => "{Artist} - {Album}"}/
+                {/block:AlbumArt}
+                %h4 {TrackName}
+                {block:Artist}
+                %h5 {Artist}
+                {/block:Artist}
+                {block:Album}
+                %h5 {Album}
+                {/block:Album}
+              {/block:TrackName}
+            {block:Caption}
+            .caption-post-body
+              {Caption}
+            {/block:Caption}
+            {/block:Audio}
+            
+            -# Video Post
+            {block:Video}
+            .video-inner
+              {VideoEmbed-700}
+              %h5.play-count {PlayCountWithLabel}
+            {block:Caption}
+            .caption-post-body
+              {Caption}
+            {/block:Caption}
+
+            {/block:Video}
+        
+          .post-meta
+            {block:Date}
+            .post-date
+              %h5.date-time {ShortMonth} {DayOfMonth} {Year} @ {12Hour}:{Minutes}{AmPm}
+              %h5.time-ago {TimeAgo}
+            {/block:Date}
+            {block:HasTags}
+            .post-tags
+              %h5.tags
+                {block:Tags}
+                %a{:href => "{TagURL}"} {Tag}
+                {/block:Tags}
+            {/block:HasTags}
+            {block:PostNotes}
+            .post-notes
+              %h5.note-count {NoteCountWithLabel}
+            {/block:PostNotes}
+            .post-interact
+              {ReblogButton color="grey"}
+              {LikeButton color="grey"}
+
+        {/block:Posts}
+
+  %footer
+    .wrapper
+      {CopyrightYears}
