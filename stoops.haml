@@ -46,15 +46,15 @@
   #page-content
     .wrapper
       .posts
-        .pagination-top.clearfix
-          %h2 The Latest
+        .pagination-block.pagination-top.clearfix
+          %h3 The Latest
           {block:Pagination}
           .pagination-nextprev
             {block:PreviousPage}
-            %a{:href => "{PreviousPage}"} Next
+            %a.nav-link{:href => "{PreviousPage}"} Prev
             {/block:PreviousPage}
             {block:NextPage}
-            %a{:href => "{NextPage}"} Next
+            %a.nav-link{:href => "{NextPage}"} Next
             {/block:NextPage}
           {/block:Pagination}
         {block:Posts}
@@ -82,11 +82,6 @@
                 %source{:media => "(max-width: 500px)", :srcset => "{PhotoURL-500}"}
                 %source{:media => "(min-width: 501px)", :srcset => "{PhotoURL-HighRes}"}
                 %img{:src => "{PhotoURL-HighRes}", :alt => "{PhotoAlt}"}
-              {block:Exif}
-              .exif-trigger
-              .exif-contain
-                %h5 {block:Camera}{Camera}{/block:Camera}{block:FocalLength} / {FocalLength}{/block:FocalLength}{block:Aperture} / {Aperture}{/block:Aperture}{block:Exposure} / {Exposure}{/block:Exposure}{block:ISO} / {ISO}{/block:ISO}
-              {/block:Exif}
               {block:LinkURL}
               .clickthrough
                 {LinkOpenTag}{LinkURL}{LinkCloseTag}
@@ -232,15 +227,15 @@
 
             {/block:Video}
         
-          .post-meta
+          .post-meta.clearfix
             {block:Date}
             .post-date
-              %h5.date-time {ShortMonth} {DayOfMonth} {Year} @ {12Hour}:{Minutes}{AmPm}
-              %h5.time-ago {TimeAgo}
+              %h5.date-time {ShortMonth} {DayOfMonth} {Year} - {12Hour}:{Minutes}{AmPm}
             {/block:Date}
             {block:HasTags}
             .post-tags
               %h5.tags
+                Tagged:&nbsp;
                 {block:Tags}
                 %a{:href => "{TagURL}"} {Tag}
                 {/block:Tags}
@@ -254,16 +249,16 @@
               {LikeButton color="grey"}
         
         {/block:Posts}
-        .pagination-bottom.clearfix
+        .pagination-block.pagination-bottom.clearfix
           {block:Pagination}
           .pagination-numbers
           %h5 {CurrentPage} / {TotalPages}
           .pagination-nextprev
             {block:PreviousPage}
-            %a{:href => "{PreviousPage}"} Next
+            %a.nav-link{:href => "{PreviousPage}"} Prev
             {/block:PreviousPage}
             {block:NextPage}
-            %a{:href => "{NextPage}"} Next
+            %a.nav-link{:href => "{NextPage}"} Next
             {/block:NextPage}
           {/block:Pagination}
 

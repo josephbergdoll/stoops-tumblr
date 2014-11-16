@@ -1,0 +1,18 @@
+.pagination-block {
+  text-align: center;
+  position: relative;
+
+  h3 {
+  }
+  .pagination-nextprev {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  &.pagination-top {
+    border-bottom: $standard-border;
+    margin-bottom: 1rem;
+  }
+
+}

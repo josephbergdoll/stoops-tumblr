@@ -278,10 +278,10 @@ a.text-link {
     clear: both; }
   @media screen and (min-width: 1024px) and (max-width: 1279px) {
     .wrapper {
-      padding: 0 1.25rem; } }
+      padding: 0 4rem; } }
   @media screen and (min-width: 1280px) {
     .wrapper {
-      padding: 0 4rem; } }
+      padding: 0 8rem; } }
   .wrapper.collapse-small {
     padding: 0; }
     @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -289,10 +289,10 @@ a.text-link {
         padding: 0 1rem; } }
     @media screen and (min-width: 1024px) and (max-width: 1279px) {
       .wrapper.collapse-small {
-        padding: 0 1.25rem; } }
+        padding: 0 4rem; } }
     @media screen and (min-width: 1280px) {
       .wrapper.collapse-small {
-        padding: 0 4rem; } }
+        padding: 0 8rem; } }
   .wrapper.collapse-medium {
     padding: 0; }
     @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -300,10 +300,10 @@ a.text-link {
         padding: 0; } }
     @media screen and (min-width: 1024px) and (max-width: 1279px) {
       .wrapper.collapse-medium {
-        padding: 0 1.25rem; } }
+        padding: 0 4rem; } }
     @media screen and (min-width: 1280px) {
       .wrapper.collapse-medium {
-        padding: 0 4rem; } }
+        padding: 0 8rem; } }
 
 .heading-with-link h1, .heading-with-link h2, .heading-with-link h3, .heading-with-link h4, .heading-with-link h5 {
   display: table;
@@ -381,3 +381,41 @@ a.text-link {
   @media screen and (min-width: 768px) {
     .no-small {
       display: block; } }
+
+.pagination-block {
+  text-align: center;
+  position: relative; }
+  .pagination-block .pagination-nextprev {
+    position: absolute;
+    top: 0;
+    right: 0; }
+  .pagination-block.pagination-top {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem; }
+
+.single-post {
+  margin: 0 auto 2rem; }
+  .single-post .post-meta {
+    margin: 1rem auto 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1); }
+  .single-post .post-date, .single-post .post-tags, .single-post .post-notes {
+    float: left;
+    margin: 0 1rem 0 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.75rem 1rem 0 0; }
+  .single-post .post-interact {
+    float: right;
+    text-align: right;
+    padding-top: 0.75rem; }
+    .single-post .post-interact .reblog_button, .single-post .post-interact .like_button {
+      display: inline-block !important;
+      -webkit-transition: opacity 250ms ease-out;
+      -moz-transition: opacity 250ms ease-out;
+      transition: opacity 250ms ease-out; }
+      .single-post .post-interact .reblog_button:hover, .single-post .post-interact .like_button:hover {
+        opacity: 0.5;
+        -webkit-transition: opacity 200ms ease-out;
+        -moz-transition: opacity 200ms ease-out;
+        transition: opacity 200ms ease-out; }
+    .single-post .post-interact .reblog_button {
+      margin-right: 1rem; }

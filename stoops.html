@@ -44,15 +44,15 @@
   <div id='page-content'>
     <div class='wrapper'>
       <div class='posts'>
-        <div class='pagination-top clearfix'>
-          <h2>The Latest</h2>
+        <div class='pagination-block pagination-top clearfix'>
+          <h3>The Latest</h3>
           {block:Pagination}
           <div class='pagination-nextprev'>
             {block:PreviousPage}
-            <a href='{PreviousPage}'>Next</a>
+            <a class='nav-link' href='{PreviousPage}'>Prev</a>
             {/block:PreviousPage}
             {block:NextPage}
-            <a href='{NextPage}'>Next</a>
+            <a class='nav-link' href='{NextPage}'>Next</a>
             {/block:NextPage}
           </div>
           {/block:Pagination}
@@ -82,12 +82,6 @@
                 <source media='(min-width: 501px)' srcset='{PhotoURL-HighRes}'>
                 <img alt='{PhotoAlt}' src='{PhotoURL-HighRes}'>
               </picture>
-              {block:Exif}
-              <div class='exif-trigger'></div>
-              <div class='exif-contain'>
-                <h5>{block:Camera}{Camera}{/block:Camera}{block:FocalLength} / {FocalLength}{/block:FocalLength}{block:Aperture} / {Aperture}{/block:Aperture}{block:Exposure} / {Exposure}{/block:Exposure}{block:ISO} / {ISO}{/block:ISO}</h5>
-              </div>
-              {/block:Exif}
               {block:LinkURL}
               <div class='clickthrough'>
                 {LinkOpenTag}{LinkURL}{LinkCloseTag}
@@ -244,16 +238,16 @@
             {/block:Caption}
             {/block:Video}
           </div>
-          <div class='post-meta'>
+          <div class='post-meta clearfix'>
             {block:Date}
             <div class='post-date'>
-              <h5 class='date-time'>{ShortMonth} {DayOfMonth} {Year} @ {12Hour}:{Minutes}{AmPm}</h5>
-              <h5 class='time-ago'>{TimeAgo}</h5>
+              <h5 class='date-time'>{ShortMonth} {DayOfMonth} {Year} - {12Hour}:{Minutes}{AmPm}</h5>
             </div>
             {/block:Date}
             {block:HasTags}
             <div class='post-tags'>
               <h5 class='tags'>
+                Tagged:&nbsp;
                 {block:Tags}
                 <a href='{TagURL}'>{Tag}</a>
                 {/block:Tags}
@@ -272,16 +266,16 @@
           </div>
         </article>
         {/block:Posts}
-        <div class='pagination-bottom clearfix'>
+        <div class='pagination-block pagination-bottom clearfix'>
           {block:Pagination}
           <div class='pagination-numbers'></div>
           <h5>{CurrentPage} / {TotalPages}</h5>
           <div class='pagination-nextprev'>
             {block:PreviousPage}
-            <a href='{PreviousPage}'>Next</a>
+            <a class='nav-link' href='{PreviousPage}'>Prev</a>
             {/block:PreviousPage}
             {block:NextPage}
-            <a href='{NextPage}'>Next</a>
+            <a class='nav-link' href='{NextPage}'>Next</a>
             {/block:NextPage}
           </div>
           {/block:Pagination}
