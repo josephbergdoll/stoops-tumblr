@@ -11,3 +11,23 @@ $(document).ready(function() {
     }
   });
 });
+
+$(window).load(function() {
+  var svg = new Walkway({
+    selector: '#stoops_logo',
+    duration: '2000'
+  });
+
+
+  setTimeout(function() {
+    $('.logo').addClass('show');
+    svg.draw(function() {
+      console.log('Animation finished');
+      setTimeout(function() {
+        $('.logo').addClass('finished');
+      },1000);
+    });
+  }, 300);
+  
+
+});

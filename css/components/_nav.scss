@@ -22,18 +22,24 @@
     @include media($medium-up) {
       display: block;
       border-top: $border-lightblack-thick;
-      padding: 0.25rem 0 0.35rem;
+      padding: 0.25rem 0 0.25rem;
       font-weight: $type-bold;
+      border-bottom: 2px solid transparent;
+      border-right: 2px solid transparent;
       font-size: 0.875rem;
       letter-spacing: 0.03em;
       color: $dark-black;
       @include transition(all $hover-out ease-out);
       &:hover {
-        border-top: $border-black-thick;
-        color: $white;
+        border: $border-black-thick;
+        color: $black;
         padding-left: 0.5rem;
-        background: $black;
         @include transition(all $hover-in ease-out);
+      }
+      &:active {
+        border: $border-black-thick;
+        color: $white;
+        background: $black;
       }
     }
   }

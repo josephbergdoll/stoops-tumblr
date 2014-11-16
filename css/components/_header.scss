@@ -2,6 +2,8 @@
   .logo {
     width: 18rem;
     margin: 2rem auto 3rem;
+    opacity: 0;
+    @include transition(all $hover-out ease-out, opacity $short-transition ease-out);
     svg {
       max-width: 98%;
       margin: 0 auto;
@@ -16,11 +18,28 @@
         @include transition(all $hover-out ease-out);
       }
     }
-    &:hover {
+    &.show {
+      opacity: 1;
+    }
+    &.finished {
       svg>path {
         fill: #000;
         stroke-width: 0px;
+        stroke: transparent;
+        @include transition(all $long-transition ease-out);
+      }
+    }
+    &:hover {
+      @include transform(scale(1.1));
+      @include transition(all $hover-in ease-out);
+      svg>path {
         @include transition(all $hover-in ease-out);
+      }
+    }
+    &:active {
+      svg>path {
+        fill: #ff0000;
+        stroke-width: 0px;
       }
     }
   }
