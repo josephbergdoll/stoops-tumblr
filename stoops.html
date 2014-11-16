@@ -29,34 +29,21 @@
     <div class='wrapper'>
       <a class='logo' href='{BlogURL}'>{Title}</a>
       <nav class='main-nav'>
-        <ul>
+        <div class='nav-inner'>
           {block:HasPages}
           {block:Pages}
-          <li>
+          <div class='nav-item'>
             <a href='{URL}'>{Label}</a>
-          </li>
+          </div>
           {/block:Pages}
           {/block:HasPages}
-        </ul>
+        </div>
       </nav>
     </div>
   </header>
   <div id='page-content'>
     <div class='wrapper'>
       <div class='posts'>
-        <div class='pagination-block pagination-top clearfix'>
-          <h3>The Latest</h3>
-          {block:Pagination}
-          <div class='pagination-nextprev'>
-            {block:PreviousPage}
-            <a class='nav-link' href='{PreviousPage}'>Prev</a>
-            {/block:PreviousPage}
-            {block:NextPage}
-            <a class='nav-link' href='{NextPage}'>Next</a>
-            {/block:NextPage}
-          </div>
-          {/block:Pagination}
-        </div>
         {block:Posts}
         <article class='single-post {PostType} {TagsAsClasses}'>
           <div class='post-inner'>

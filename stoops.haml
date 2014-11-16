@@ -35,10 +35,10 @@
     .wrapper
       %a.logo{:href => "{BlogURL}"} {Title}
       %nav.main-nav
-        %ul
+        .nav-inner
           {block:HasPages}
           {block:Pages}
-          %li
+          .nav-item
             %a{:href => "{URL}"} {Label}
           {/block:Pages}
           {/block:HasPages}
@@ -46,17 +46,6 @@
   #page-content
     .wrapper
       .posts
-        .pagination-block.pagination-top.clearfix
-          %h3 The Latest
-          {block:Pagination}
-          .pagination-nextprev
-            {block:PreviousPage}
-            %a.nav-link{:href => "{PreviousPage}"} Prev
-            {/block:PreviousPage}
-            {block:NextPage}
-            %a.nav-link{:href => "{NextPage}"} Next
-            {/block:NextPage}
-          {/block:Pagination}
         {block:Posts}
         %article{:class => "single-post {PostType} {TagsAsClasses}"}
           .post-inner

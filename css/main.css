@@ -389,9 +389,39 @@ a.text-link {
     position: absolute;
     top: 0;
     right: 0; }
-  .pagination-block.pagination-top {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem; }
+
+.main-nav {
+  margin-bottom: 2rem; }
+  @media screen and (min-width: 768px) {
+    .main-nav .nav-inner {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: collapse; } }
+  @media screen and (min-width: 768px) {
+    .main-nav .nav-item {
+      display: table-cell;
+      border-right: 1.5rem solid white; }
+      .main-nav .nav-item:last-of-type {
+        border-right: 0; } }
+  @media screen and (min-width: 768px) {
+    .main-nav a {
+      display: block;
+      border-top: 2px solid #333;
+      padding: 0.25rem 0 0.35rem;
+      font-weight: 700;
+      font-size: 0.875rem;
+      -webkit-transition: all 250ms ease-out;
+      -moz-transition: all 250ms ease-out;
+      transition: all 250ms ease-out; }
+      .main-nav a:hover {
+        border-top: 2px solid black;
+        color: white;
+        padding-left: 0.5rem;
+        background: black;
+        -webkit-transition: all 200ms ease-out;
+        -moz-transition: all 200ms ease-out;
+        transition: all 200ms ease-out; } }
 
 .single-post {
   margin: 0 auto 2rem; }
@@ -419,3 +449,6 @@ a.text-link {
         transition: opacity 200ms ease-out; }
     .single-post .post-interact .reblog_button {
       margin-right: 1rem; }
+
+.single-post.text h1 {
+  border-top: 4px solid black; }

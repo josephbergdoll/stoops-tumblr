@@ -1,0 +1,37 @@
+.main-nav {
+  margin-bottom: 2rem;
+  .nav-inner {
+    @include media($medium-up) {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: collapse;
+    }
+  }
+  .nav-item {
+    @include media($medium-up) {
+      display: table-cell;
+      border-right: 1.5rem solid white;
+      &:last-of-type {
+        border-right: 0;
+      }
+    }
+  }
+  a {
+    @include media($medium-up) {
+      display: block;
+      border-top: $border-midblack-thick;
+      padding: 0.25rem 0 0.35rem;
+      font-weight: $type-bold;
+      font-size: 0.875rem;
+      @include transition(all $hover-out ease-out);
+      &:hover {
+        border-top: $border-black-thick;
+        color: $white;
+        padding-left: 0.5rem;
+        background: $black;
+        @include transition(all $hover-in ease-out);
+      }
+    }
+  }
+}
