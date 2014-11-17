@@ -89,7 +89,6 @@ a {
 }
 
 #tumblr_controls {
-  -webkit-filter: invert(100%);
   opacity: 0.5 !important;
   @include transition(opacity $short-transition ease-out);
   &:hover {

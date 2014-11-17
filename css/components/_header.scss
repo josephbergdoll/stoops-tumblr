@@ -1,5 +1,6 @@
 .header-main {
   position: relative;
+  padding-bottom: 3.5rem;
 
   .header-bg {
     background: url('https://www.dropbox.com/s/b1a2rlf656zkxvc/header-bg.jpg?dl=1') no-repeat center bottom;
@@ -12,7 +13,6 @@
     height: 100%;
     z-index: 0;
     @include animation-delay(1s);
-    opacity: 0;
   }
   
   .wrapper {
