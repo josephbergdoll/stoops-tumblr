@@ -617,9 +617,9 @@ p {
     height: 100%;
     z-index: 0;
     opacity: 0;
-    -webkit-animation-delay: 1s;
-    -moz-animation-delay: 1s;
-    animation-delay: 1s; }
+    -webkit-animation-delay: 0s;
+    -moz-animation-delay: 0s;
+    animation-delay: 0s; }
   .header-main .wrapper {
     position: relative;
     z-index: 1; }
@@ -843,7 +843,7 @@ p {
     margin: 1.25rem auto 0; }
 
 .blog-heading {
-  padding: 1rem 0;
+  padding: 0 0 1.5rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 1rem; }
 
@@ -1000,3 +1000,6 @@ p {
         -webkit-transition: all 200ms ease-out;
         -moz-transition: all 200ms ease-out;
         transition: all 200ms ease-out; }
+
+.single-post.video .video-inner {
+  margin-bottom: 1.75rem; }

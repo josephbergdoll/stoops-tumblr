@@ -25,6 +25,9 @@ $(document).ready(function() {
     }
   });
 
+  // Fit Videos
+  $(".js-fit-video").fitVids();
+
   // Photoset
   $('.js-photoset').each(function() {
     var $controlsContainer = $(this).parent().next('.js-photoset-controls');
@@ -57,6 +60,8 @@ $(document).ready(function() {
     duration: '2000'
   });
 
+
+  // Draw Splash Logo
 
   setTimeout(function() {
     $('.splash-logo').addClass('show');
