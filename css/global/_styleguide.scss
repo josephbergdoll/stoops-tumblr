@@ -24,11 +24,20 @@
 }
 
 %sg-h3 {
-
+  font-size: 0.9375rem;
+  @include media($large-up) {
+    font-size: 1.375rem;
+  }
 }
 
 %sg-h4 {
-  
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $light-black;
+  @include media($large-up) {
+    font-size: 1.125rem;
+  }
 }
 
 %sg-h5 {
@@ -159,9 +168,11 @@ p {
   padding: 0.8rem 1.5rem;
   border-radius: 0.35rem;
   text-align: center;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
   color: $light-black;
   border: $border-lightblack-thick;
+  @extend %aa-text;
   @include transition(all $hover-out ease-out);
   &:hover {
     color: $white;
