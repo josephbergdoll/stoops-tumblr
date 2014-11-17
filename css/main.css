@@ -527,6 +527,35 @@ p {
 .splash {
   width: 100%;
   height: 100%; }
+  .splash .splash-logo {
+    opacity: 0;
+    width: 50%;
+    max-width: 40rem;
+    margin: 0 auto;
+    -webkit-transition: opacity 800ms ease-out;
+    -moz-transition: opacity 800ms ease-out;
+    transition: opacity 800ms ease-out; }
+    .splash .splash-logo svg {
+      max-width: 95%;
+      margin: 0 auto;
+      height: auto;
+      display: block;
+      overflow: visible; }
+      .splash .splash-logo svg > path {
+        fill: transparent;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 6px;
+        stroke: black; }
+    .splash .splash-logo.finished svg > path {
+      fill: black;
+      stroke-width: 0px;
+      stroke: transparent;
+      -webkit-transition: all 800ms ease-out;
+      -moz-transition: all 800ms ease-out;
+      transition: all 800ms ease-out; }
+    .splash .splash-logo.show {
+      opacity: 1; }
 
 .header-main {
   position: relative;

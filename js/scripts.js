@@ -55,21 +55,21 @@ $(document).ready(function() {
 });
 
 $(window).load(function() {
-  // var svg = new Walkway({
-  //   selector: '#stoops_logo',
-  //   duration: '2000'
-  // });
+  var svg = new Walkway({
+    selector: '#splash_logo',
+    duration: '2000'
+  });
 
 
-  // setTimeout(function() {
-  //   $('.logo').addClass('show');
-  //   svg.draw(function() {
-  //     console.log('Animation finished');
-  //     setTimeout(function() {
-  //       $('.logo').addClass('finished');
-  //     },1000);
-  //   });
-  // }, 300);
+  setTimeout(function() {
+    $('.splash-logo').addClass('show');
+    svg.draw(function() {
+      console.log('Animation finished');
+      setTimeout(function() {
+        $('.splash-logo').addClass('finished');
+      },100);
+    });
+  }, 300);
   
 
 });
