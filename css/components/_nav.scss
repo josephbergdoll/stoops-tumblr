@@ -1,6 +1,14 @@
 .main-nav {
+  height: 0;
+  overflow: hidden;
+  @include transition(all $short-transition $cubic-ease);
+  @include media($medium-up) {
+    height: auto !important;
+  }
   .nav-inner {
+    text-align: center;
     @include media($medium-up) {
+      text-align: left;
       display: table;
       width: 100%;
       table-layout: fixed;
@@ -8,8 +16,10 @@
     }
   }
   .nav-item {
+    margin-bottom: 0.15rem;
     @include media($medium-up) {
       display: table-cell;
+      margin-bottom: 0;
       border-right: 1.5rem solid transparent;
       &:last-of-type {
         border-right: 0;
@@ -17,17 +27,26 @@
     }
   }
   a {
+    display: block;
     font-weight: $type-bold;
+    font-size: 0.875rem;
+    color: $white;
+    background: $black;
+    padding: 1rem 1rem;
+    @extend %aa-text;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
     @include media($medium-up) {
-      display: block;
+      @include no-aa-text;
       border-top: $border-lightblack-thick;
       padding: 0.25rem 0 0.2rem;
       font-weight: $type-bold;
       border-bottom: 0.125rem solid transparent;
       border-right: 0px solid transparent;
       border-left: 0px solid transparent;
-      font-size: 0.875rem;
       letter-spacing: 0.03em;
+      background: transparent;
       color: $dark-black;
       @include transition(all $hover-out ease-out);
       &:hover {

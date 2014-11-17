@@ -8,6 +8,10 @@
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
+@mixin no-aa-text {
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
 %hide-text {
   text-indent: 120%;
   white-space: nowrap;

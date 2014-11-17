@@ -152,3 +152,21 @@ p {
 .tag-header {
   padding-bottom: 2rem;
 }
+
+.button-cta {
+  display: table;
+  line-height: 1;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.35rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: $light-black;
+  border: $border-lightblack-thick;
+  @include transition(all $hover-out ease-out);
+  &:hover {
+    color: $white;
+    background: $black;
+    border: $border-black-thick;
+    @include transition(all $hover-in ease-out);
+  }
+}

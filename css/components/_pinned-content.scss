@@ -1,0 +1,29 @@
+.pinned-content {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  @include media($medium-up) {
+    padding: 3rem 1.5rem;
+  }
+  @include media($xlarge-up) {
+    padding: 4rem 2rem;
+  }
+  .pinned-headline {
+    line-height: 1;
+  }
+  .pinned-text {
+    margin: 1rem auto 0;
+  }
+  .button-cta {
+    margin: 1.25rem auto 0;
+  }
+}
+
+.blog-heading {
+  padding: 1rem 0;
+  border-bottom: $standard-border;
+  margin-bottom: 1rem;
+}

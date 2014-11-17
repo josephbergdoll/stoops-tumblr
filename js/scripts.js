@@ -11,6 +11,21 @@ $(document).ready(function() {
     }
   });
 
+  // Open Nav
+  $('.link-to-nav').click(function(e) {
+    var wrapperHeight = $('.main-nav .nav-inner').outerHeight();
+    var navHeight = wrapperHeight + 1;
+    e.preventDefault();
+    $('body').toggleClass('mobile-nav-opened');
+    if ( $('body').hasClass('mobile-nav-opened') ) {
+      $('.main-nav').css( "height", navHeight );
+    }
+    else {
+      $('.main-nav').removeAttr('style');
+    }
+  });
+
+  // Photoset
   $('.js-photoset').each(function() {
     var $controlsContainer = $(this).parent().next('.js-photoset-controls');
     var $slideImg = $(this).find('li');
