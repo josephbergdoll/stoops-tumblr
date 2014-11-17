@@ -1,46 +1,76 @@
 .header-main {
-  .logo {
-    width: 18rem;
-    margin: 2rem auto 3rem;
+  position: relative;
+
+  .header-bg {
+    background: url('https://www.dropbox.com/s/b1a2rlf656zkxvc/header-bg.jpg?dl=1') no-repeat center bottom;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    @include animation-delay(1s);
     opacity: 0;
-    @include transition(all $hover-out ease-out, opacity $short-transition ease-out);
+  }
+  
+  .wrapper {
+    position: relative;
+    z-index: 1;
+  }
+
+  .header-top {
+    padding-top: 3rem;
+    margin-bottom: 2rem;
+  }
+  .logo {
+    width: 14rem;
+    margin: 0 auto;
+    @include transition(all $hover-out ease-out);
     svg {
-      max-width: 98%;
+      max-width: 95%;
       margin: 0 auto;
       height: auto;
       display: block;
+      overflow: visible;
       >path {
-        fill: #fff;
-        stroke-width: 3px;
+        fill: $black;
+        stroke-width: 0px;
         stroke-linecap: round;
         stroke-linejoin: round;
-        stroke: #000;
+        stroke: $black;
         @include transition(all $hover-out ease-out);
       }
     }
-    &.show {
-      opacity: 1;
-    }
-    &.finished {
-      svg>path {
-        fill: #000;
-        stroke-width: 0px;
-        stroke: transparent;
-        @include transition(all $long-transition ease-out);
-      }
-    }
     &:hover {
-      @include transform(scale(1.1));
       @include transition(all $hover-in ease-out);
       svg>path {
+        fill: transparent;
+        stroke-width: 4px;
+        stroke: $black;
         @include transition(all $hover-in ease-out);
       }
     }
     &:active {
       svg>path {
-        fill: #ff0000;
-        stroke-width: 0px;
+        fill: transparent;
+        stroke-width: 4px;
+        stroke: $dark-grey;
       }
     }
   }
 }
+
+// &.finished {
+//   svg>path {
+//     fill: #000;
+//     stroke-width: 0px;
+//     stroke: transparent;
+//     @include transition(all $long-transition ease-out);
+//   }
+// }
+
+// &.show {
+//   opacity: 1;
+// }

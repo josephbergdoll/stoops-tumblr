@@ -47,3 +47,9 @@
 .no-padding {
   padding: 0 !important;
 }
+
+.fade-in {
+  opacity: 0;
+  @include animation(fade-in 1200ms $cubic-ease 1);
+  @include animation-fill-mode(forwards);
+}

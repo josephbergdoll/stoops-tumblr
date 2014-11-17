@@ -1,7 +1,7 @@
 
 // Type Styles
 
-$serif: "Times New Roman", Times, serif;
+$serif: "Georgia", Times, serif;
 $sans: "Basetica Pro", "Helvetica Neue", Arial, Helvetica, sans-serif;
 
 $type-black: 800;
@@ -50,6 +50,9 @@ $black-dark-transparent: rgba(0,0,0,0.8);
 $standard-bumper: 1rem;
 $standard-border: 1px solid $grey-border;
 $border-black: 1px solid $light-black;
+$border-light-grey: 1px solid $light-grey;
+$border-mid-grey: 1px solid $mid-grey;
+$border-dark-grey: 1px solid $dark-grey;
 $border-lightblack-thick: 0.125rem solid $light-black;
 $border-black-thick: 0.125rem solid $black;
 $border-black-thicker: 0.25rem solid $black;
