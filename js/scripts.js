@@ -74,3 +74,25 @@ $(window).load(function() {
   
 
 });
+
+$(window).on("scroll", function(e) {
+  if($(".splash").length&&$(".splash").is(":visible")) {
+    var scrollDistance = $(window).scrollTop();
+    if (scrollDistance < $('.blog').offset().top) {
+      var splashHeight = $('.splash').outerHeight();
+      if (scrollDistance < (splashHeight/5)) {
+        // $('html, body').animate({"scrollTop":"0px"}, 600);
+      }
+      else {
+        $('html, body').animate({"scrollTop":"0px"},800);
+        $('.splash').animate({"opacity":"0"},800);
+        $('.blog').animate({"top":"0px"},800, function() {
+          $('.splash').remove();
+          $('.blog').addClass('static');
+          $('.page-index .header-bg').addClass('fade-in');
+        }); 
+      }
+    }
+  }
+
+});

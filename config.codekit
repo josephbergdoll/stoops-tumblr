@@ -1867,6 +1867,50 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/img\/cover-1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 171253,
+		"inputAbbreviatedPath": "\/img\/cover-1.jpg",
+		"outputAbbreviatedPath": "\/img\/cover-1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/cover-2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 221784,
+		"inputAbbreviatedPath": "\/img\/cover-2.jpg",
+		"outputAbbreviatedPath": "\/img\/cover-2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/cover-3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 158234,
+		"inputAbbreviatedPath": "\/img\/cover-3.jpg",
+		"outputAbbreviatedPath": "\/img\/cover-3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/cover-4.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 256225,
+		"inputAbbreviatedPath": "\/img\/cover-4.jpg",
+		"outputAbbreviatedPath": "\/img\/cover-4.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/header-bg.jpg": {
 		"fileType": 16384,
 		"ignore": 0,

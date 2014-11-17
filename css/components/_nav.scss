@@ -50,15 +50,10 @@
       color: $dark-black;
       @include transition(all $hover-out ease-out);
       &:hover {
-        border: $border-black-thick;
-        color: $black;
-        padding-left: 0.5rem;
-        @include transition(all $hover-in ease-out);
-      }
-      &:active {
-        border: $border-black-thick;
+        border-top: $border-black-thick;
         color: $white;
         background: $black;
+        padding-left: 0.2rem;
       }
     }
   }
