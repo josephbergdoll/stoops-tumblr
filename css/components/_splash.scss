@@ -1,6 +1,13 @@
 .splash {
   width: 100%;
   height: 100%;
+  
+  .vertical-align {
+    @include animation-delay(500ms);
+    h4 {
+      @include animation-delay(3s);
+    }
+  }
 
   .splash-logo {
     opacity: 0;

@@ -52,10 +52,7 @@ $(document).ready(function() {
     });
   });
 
-});
-
-$(window).load(function() {
-  var svg = new Walkway({
+   var svg = new Walkway({
     selector: '#splash_logo',
     duration: '2000'
   });
@@ -70,6 +67,10 @@ $(window).load(function() {
       },100);
     });
   }, 300);
+
+});
+
+$(window).load(function() {
   
 
 });
