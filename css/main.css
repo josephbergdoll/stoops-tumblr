@@ -134,18 +134,25 @@ html {
   0% {
     opacity: 0; }
   100% {
-    opacity: 1; } }
+    opacity: 1;
+    -webkit-transform: translateY(0); } }
 @-moz-keyframes fade-in {
   0% {
     opacity: 0; }
   100% {
-    opacity: 1; } }
+    opacity: 1;
+    -moz-transform: translateY(0); } }
 @keyframes fade-in {
   0% {
     opacity: 0; }
   100% {
-    opacity: 1; } }
-.button-cta, .main-nav a, .single-post.photoset .slide-control-nav li {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0); } }
+.button-cta, .splash .vertical-align h4, .main-nav a, .single-post.photoset .slide-control-nav li {
   -webkit-font-smoothing: antialiased; }
 
 .single-post.text .text-post-body:after {
@@ -566,10 +573,60 @@ p {
     -moz-animation-delay: 500ms;
     animation-delay: 500ms; }
     .splash .vertical-align h4 {
+      margin-top: 0.75rem;
+      letter-spacing: 0.35em;
       -webkit-animation-delay: 3s;
       -moz-animation-delay: 3s;
       animation-delay: 3s;
       color: white; }
+  .splash .scroll-for-more {
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;
+    animation-delay: 4s;
+    display: block;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    width: 6rem;
+    margin-left: -3rem; }
+    .splash .scroll-for-more svg {
+      max-width: 95%;
+      margin: 0 auto;
+      display: block;
+      overflow: visible;
+      -webkit-transition: all 250ms ease-out;
+      -moz-transition: all 250ms ease-out;
+      transition: all 250ms ease-out; }
+      .splash .scroll-for-more svg > path {
+        fill: white;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 0px;
+        stroke: transparent;
+        -webkit-transition: all 250ms ease-out;
+        -moz-transition: all 250ms ease-out;
+        transition: all 250ms ease-out; }
+    .splash .scroll-for-more:hover svg {
+      -webkit-transform: scale(1.05);
+      -moz-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      -o-transform: scale(1.05);
+      transform: scale(1.05);
+      -webkit-transition: all 200ms ease-out;
+      -moz-transition: all 200ms ease-out;
+      transition: all 200ms ease-out; }
+      .splash .scroll-for-more:hover svg > path {
+        fill: transparent;
+        stroke-width: 6px;
+        stroke: white;
+        -webkit-transition: all 200ms ease-out;
+        -moz-transition: all 200ms ease-out;
+        transition: all 200ms ease-out; }
   .splash .splash-logo {
     opacity: 0;
     width: 50%;
@@ -620,6 +677,8 @@ p {
     -webkit-animation-delay: 0s;
     -moz-animation-delay: 0s;
     animation-delay: 0s; }
+    .header-main .header-bg.show-bg {
+      opacity: 1; }
   .header-main .wrapper {
     position: relative;
     z-index: 1; }

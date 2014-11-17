@@ -1982,6 +1982,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/js\/plugins\/fastclick.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/plugins\/fastclick.js",
+		"outputAbbreviatedPath": "\/js\/plugins\/min\/fastclick-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/js\/plugins\/fitvids.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -2081,20 +2092,26 @@
 	"\/js\/plugins.js": [
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/js\/plugins\/walkway.js",
+			"linkedFileAbbreviatedPath": "\/js\/plugins\/fastclick.js",
 			"position": 0,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/js\/plugins\/flexslider.js",
+			"linkedFileAbbreviatedPath": "\/js\/plugins\/walkway.js",
 			"position": 1,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/js\/plugins\/fitvids.js",
+			"linkedFileAbbreviatedPath": "\/js\/plugins\/flexslider.js",
 			"position": 2,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/js\/plugins\/fitvids.js",
+			"position": 3,
 			"type": 0
 			}
 		]

@@ -10,8 +10,49 @@
   .vertical-align {
     @include animation-delay(500ms);
     h4 {
+      @extend %aa-text;
+      margin-top: 0.75rem;
+      letter-spacing: 0.35em;
       @include animation-delay(3s);
       color: $white;
+    }
+  }
+
+  .scroll-for-more {
+    @include transform(translateY(-50%));
+    @include animation-delay(4s);
+    display: block;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    width: 6rem;
+    margin-left: -3rem;
+    svg {
+      max-width: 95%;
+      margin: 0 auto;
+      display: block;
+      overflow: visible;
+      @include transition(all $hover-out ease-out);
+      >path {
+        fill: $white;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 0px;
+        stroke: transparent;
+        @include transition(all $hover-out ease-out);
+      }
+    }
+    &:hover {
+      svg {
+        @include transform(scale(1.05));
+        @include transition(all $hover-in ease-out);
+        >path {
+          fill: transparent;
+          stroke-width: 6px;
+          stroke: $white;
+          @include transition(all $hover-in ease-out);
+        }
+      }
     }
   }
 

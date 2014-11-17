@@ -17,6 +17,9 @@
     z-index: 0;
     opacity: 0;
     @include animation-delay(0s);
+    &.show-bg {
+      opacity: 1;
+    }
   }
   
   .wrapper {

@@ -25,6 +25,19 @@ $(document).ready(function() {
     }
   });
 
+  // Click for more
+  $('.scroll-for-more').click(function(event) {
+    event.preventDefault();
+    $('html, body').animate({"scrollTop":"0px"},800);
+    $('.splash').animate({"opacity":"0"},800, function() {
+      $('.splash').remove();
+    });
+    $('.blog').animate({"top":"0px"},800, function() {
+      $('.blog').addClass('static');
+      $('.page-index .header-bg').addClass('fade-in');
+    }); 
+  });
+
   // Fit Videos
   $(".js-fit-video").fitVids();
 
