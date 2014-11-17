@@ -550,17 +550,19 @@ p {
     .no-small {
       display: block; } }
 
-.page-index .blog {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background: white; }
-  .page-index .blog.static {
-    position: static;
-    top: 0; }
+@media screen and (min-width: 768px) {
+  .page-index .blog {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white; }
+    .page-index .blog.static {
+      position: static;
+      top: 0; } }
 
 .splash {
+  display: none;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -568,6 +570,9 @@ p {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
+  @media screen and (min-width: 768px) {
+    .splash {
+      display: block; } }
   .splash .vertical-align {
     -webkit-animation-delay: 500ms;
     -moz-animation-delay: 500ms;

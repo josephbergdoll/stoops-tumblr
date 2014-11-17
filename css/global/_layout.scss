@@ -136,13 +136,15 @@
 }
 
 .page-index .blog {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background: $white;
-  &.static {
-    position: static;
-    top: 0;
+  @include media($medium-up) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: $white;
+    &.static {
+      position: static;
+      top: 0;
+    }
   }
 }
