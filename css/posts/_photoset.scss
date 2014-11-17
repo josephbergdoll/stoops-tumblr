@@ -1,0 +1,60 @@
+.single-post.photoset {
+  .photoset-imgs-wrap {
+    overflow: hidden;
+    position: relative;
+    height: 0;
+    padding-bottom: 66%;
+  }
+  .js-photoset {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .slides {
+    @include clearfix;
+    display: block;
+    height: inherit;
+    li {
+      width: 100%;
+      height: 100%;
+      display: block;
+      background-color: $light-white;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      cursor: pointer;
+    }
+  }
+  .photoset-controls {
+    padding: 0.35rem 0;
+    margin: 0 0 2rem;
+    border-bottom: $standard-border;
+    @include clearfix;
+  }
+  .slide-control-nav {
+    @include clearfix;
+    float: right;
+    li {
+      float: left;
+      @extend %sg-h5;
+      font-size: 0.75rem;
+      text-align: right;
+      @extend %aa-text;
+      a {
+        cursor: pointer;
+        color: $text-light-grey;
+        padding: 0.15rem;
+        @include transition(all $hover-out ease-out);
+        &.slide-active {
+          color: $black;
+        }
+        &:hover {
+          color: $dark-black;
+          @include transition(all $hover-in ease-out);
+        }
+      }
+    }
+  }
+}

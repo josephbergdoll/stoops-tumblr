@@ -1,4 +1,15 @@
 .footer-inner {
   border-top: $standard-border;
   padding: 1rem 0 1rem;
+
+  .footer-left {
+    @include media($medium-up) {
+      float: left;
+    }
+  }
+  .footer-right {
+    @include media($medium-up) {
+      float: right;
+    }
+  }
 }

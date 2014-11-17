@@ -56,8 +56,16 @@
   <div id='page-content'>
     <div class='wrapper'>
       <div class='posts'>
+        {block:TagPage}
+        <div class='tag-header'>
+          <h5 class='center'>
+            Showing all posts tagged with&nbsp;
+            <a href='{TagURL}'>{Tag}</a>
+          </h5>
+        </div>
+        {/block:TagPage}
         {block:Posts}
-        <article class='single-post {PostType} {TagsAsClasses}'>
+        <article class='single-post {PostType} {block:Photoset}photoset{/block:Photoset} {TagsAsClasses}'>
           <div class='post-inner'>
             {block:Text}
             {block:Title}
@@ -123,29 +131,15 @@
             {/block:Panorama}
             {block:Photoset}
             <div class='photoset-imgs-wrap'>
-              <div class='photoset-imgs'>
-                {block:Photos}
-                <div class='photo-wrap'>
-                  <picture>
-                    <source media='(max-width: 500px)' srcset='{PhotoURL-500}'>
-                    <source media='(min-width: 501px)' srcset='{PhotoURL-HighRes}'>
-                    <img alt='{PhotoAlt}' src='{PhotoURL-HighRes}'>
-                  </picture>
-                  {block:Exif}
-                  <div class='exif-trigger'></div>
-                  <div class='exif-contain'>
-                    <h5>{block:Camera}{Camera}{/block:Camera}{block:FocalLength} / {FocalLength}{/block:FocalLength}{block:Aperture} / {Aperture}{/block:Aperture}{block:Exposure} / {Exposure}{/block:Exposure}{block:ISO} / {ISO}{/block:ISO}</h5>
-                  </div>
-                  {/block:Exif}
-                  {block:Caption}
-                  <div class='photo-single-caption'>
-                    {Caption}
-                  </div>
-                  {/block:Caption}
-                </div>
-                {/block:Photos}
+              <div class='js-photoset'>
+                <ul class='slides'>
+                  {block:Photos}
+                  <li class='photo-wrap' style="background-image: url('{PhotoURL-HighRes}');"></li>
+                  {/block:Photos}
+                </ul>
               </div>
             </div>
+            <div class='photoset-controls js-photoset-controls'></div>
             {block:Caption}
             <div class='caption-post-body'>
               {Caption}
@@ -240,28 +234,30 @@
             {/block:Video}
           </div>
           <div class='post-meta clearfix'>
-            {block:Date}
-            <div class='post-date'>
-              <h5 class='date-time'>
-                <a class='date-link' href='{Permalink}'>{ShortMonth} {DayOfMonth} {Year} - {12Hour}:{Minutes}{AmPm}</a>
-              </h5>
+            <div class='post-meta-left'>
+              {block:Date}
+              <div class='post-date'>
+                <h5 class='date-time'>
+                  <a class='date-link' href='{Permalink}'>{ShortMonth} {DayOfMonth} {Year} - {12Hour}:{Minutes}{AmPm}</a>
+                </h5>
+              </div>
+              {/block:Date}
+              {block:HasTags}
+              <div class='post-tags'>
+                <h5 class='tags'>
+                  Tagged:&nbsp;
+                  {block:Tags}
+                  <a href='{TagURL}'>{Tag}</a>
+                  {/block:Tags}
+                </h5>
+              </div>
+              {/block:HasTags}
+              {block:PostNotes}
+              <div class='post-notes'>
+                <h5 class='note-count'>{NoteCountWithLabel}</h5>
+              </div>
+              {/block:PostNotes}
             </div>
-            {/block:Date}
-            {block:HasTags}
-            <div class='post-tags'>
-              <h5 class='tags'>
-                Tagged:&nbsp;
-                {block:Tags}
-                <a href='{TagURL}'>{Tag}</a>
-                {/block:Tags}
-              </h5>
-            </div>
-            {/block:HasTags}
-            {block:PostNotes}
-            <div class='post-notes'>
-              <h5 class='note-count'>{NoteCountWithLabel}</h5>
-            </div>
-            {/block:PostNotes}
             <div class='post-interact'>
               {ReblogButton color="black"}
               {LikeButton color="black"}
@@ -269,8 +265,8 @@
           </div>
         </article>
         {/block:Posts}
+        {block:Pagination}
         <div class='pagination-block pagination-bottom clearfix'>
-          {block:Pagination}
           <div class='pagination-numbers'></div>
           <h5>{CurrentPage} / {TotalPages}</h5>
           <div class='pagination-nextprev'>
@@ -281,15 +277,23 @@
             <a class='nav-link' href='{NextPage}'>Next</a>
             {/block:NextPage}
           </div>
-          {/block:Pagination}
         </div>
+        {/block:Pagination}
       </div>
     </div>
   </div>
   <footer>
     <div class='wrapper'>
-      <div class='footer-inner'>
-        {CopyrightYears}
+      <div class='footer-inner clearfix'>
+        <div class='footer-left'>
+          <h5>All content &copy; {CopyrightYears} Stoops Magazine</h5>
+        </div>
+        <div class='footer-right'>
+          <h5>
+            Design &amp; Code by
+            <a href='http://www.osephj.com' target='new'>Joseph Bergdoll</a>
+          </h5>
+        </div>
       </div>
     </div>
   </footer>
