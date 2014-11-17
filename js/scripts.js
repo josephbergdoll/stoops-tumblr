@@ -81,10 +81,12 @@ $(window).on("scroll", function(e) {
     if (scrollDistance < $('.blog').offset().top) {
       var splashHeight = $('.splash').outerHeight();
       if (scrollDistance > (splashHeight/5)) {
+        $(window).off('scroll');
         $('html, body').animate({"scrollTop":"0px"},800);
-        $('.splash').animate({"opacity":"0"},800);
-        $('.blog').animate({"top":"0px"},800, function() {
+        $('.splash').animate({"opacity":"0"},400, function() {
           $('.splash').remove();
+        });
+        $('.blog').animate({"top":"0px"},800, function() {
           $('.blog').addClass('static');
           $('.page-index .header-bg').addClass('fade-in');
         }); 
