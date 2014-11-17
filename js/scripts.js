@@ -80,10 +80,7 @@ $(window).on("scroll", function(e) {
     var scrollDistance = $(window).scrollTop();
     if (scrollDistance < $('.blog').offset().top) {
       var splashHeight = $('.splash').outerHeight();
-      if (scrollDistance < (splashHeight/5)) {
-        // $('html, body').animate({"scrollTop":"0px"}, 600);
-      }
-      else {
+      if (scrollDistance > (splashHeight/5)) {
         $('html, body').animate({"scrollTop":"0px"},800);
         $('.splash').animate({"opacity":"0"},800);
         $('.blog').animate({"top":"0px"},800, function() {
