@@ -985,6 +985,8 @@ p {
       margin: 0 auto 3rem; } }
   .single-post .caption-post-body {
     margin: 0 auto 2rem; }
+  .single-post strong {
+    color: #232323; }
   .single-post .post-meta {
     margin: 1rem auto 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
