@@ -13,6 +13,7 @@
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'>
   <!-- Custom Functions -->
   <meta content='Coming Spring 2015' name='text:Cover Slide Subtext'>
+  <meta content='0' name='if:Show Instagram'>
   <meta content='0' name='if:Show pinned content field'>
   <meta content='' name='text:Pinned Content Headline'>
   <meta content='' name='text:Pinned Content Paragraph'>
@@ -102,10 +103,19 @@
           {/block:IfPinnedContentButtonText}
           {/block:IfPinnedContentButtonURL}
         </div>
+        {block:IfShowInstagram}
+        <div class='instagram-wrap'>
+          <h5 class='center'>Instagram</h5>
+          <div class='clearfix' id='instagram'></div>
+        </div>
+        {/block:IfShowInstagram}
         <div class='blog-heading'>
           <h5 class='center'>News</h5>
         </div>
         {/block:IfShowPinnedContentField}
+        {block:IfShowInstagram}
+        <div class='clearfix' id='instagram'></div>
+        {/block:IfShowInstagram}
         {/block:IndexPage}
         <div class='posts'>
           {block:TagPage}

@@ -16,6 +16,7 @@
 
   / Custom Functions
   %meta{:name => "text:Cover Slide Subtext", :content => "Coming Spring 2015"}
+  %meta{:name => "if:Show Instagram", :content => "0"}
   %meta{:name => "if:Show pinned content field", :content => "0"}
   %meta{:name => "text:Pinned Content Headline", :content => ""}
   %meta{:name => "text:Pinned Content Paragraph", :content => ""}
@@ -93,9 +94,17 @@
           %a.button-cta{:href => "{text:Pinned Content Button URL}", :target => "new"} {text:Pinned Content Button Text}
           {/block:IfPinnedContentButtonText}
           {/block:IfPinnedContentButtonURL}
+        {block:IfShowInstagram}
+        .instagram-wrap
+          %h5.center Instagram
+          #instagram.clearfix
+        {/block:IfShowInstagram}
         .blog-heading
           %h5.center News
         {/block:IfShowPinnedContentField}
+        {block:IfShowInstagram}
+        #instagram.clearfix
+        {/block:IfShowInstagram}
         {/block:IndexPage}
         .posts
           {block:TagPage}

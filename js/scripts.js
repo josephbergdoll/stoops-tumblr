@@ -86,6 +86,20 @@ $(document).ready(function() {
     });
   }, 300);
 
+  // Instagram Feed
+  var instagramFeed = new Instafeed({
+    get: 'user',
+    userId: 27117248,
+    template: '<a class="ig-tile" href="{{link}}" target="new"><img src="{{image}}" /></a>',
+    clientId: 'abde2260b5764c5c9016f1c8674732b4',
+    accessToken: '27117248.467ede5.c9a017b20fea4340ad6c38f4af83e9c8',
+    limit: '6',
+    resolution: 'standard_resolution',
+    target: 'instagram',
+  });
+
+  instagramFeed.run();
+
 });
 
 $(window).load(function() {

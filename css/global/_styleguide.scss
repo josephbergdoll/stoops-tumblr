@@ -126,6 +126,14 @@ h6 {
   @extend %sg-h6 !optional;
 }
 
+.text-post-body, .caption-post-body {
+  ol {
+    list-style-type: decimal;
+    padding-left: 1.25rem;
+    margin-bottom: 1rem;
+  }
+}
+
 p {
   @extend %sg-body-copy !optional;
   @include media($medium-only) {
@@ -141,7 +149,7 @@ p {
   &:last-of-type {
     margin-bottom: 0;
   }
-  .text-post-body & { 
+  .text-post-body:not(.img-only) & { 
     &:first-of-type {
       color: $light-black;
       font-size: 1rem;

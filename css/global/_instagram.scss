@@ -1,0 +1,34 @@
+.instagram-wrap {
+  margin-bottom: 2rem;
+  h5 {
+    margin-bottom: 1rem;
+  }
+  .ig-tile {
+    display: block;
+    border: 2px solid $mid-grey;
+    opacity: 0.85;
+    @include transition(all $hover-out ease-out);
+    @include media($small) {
+      @include span-columns(6);
+      @include omega(2n);
+    }
+    @include media($medium-up) {
+      @include span-columns(2);
+      @include omega(6n);
+    }
+    img {
+      display: block;
+    }
+    &:hover {
+      opacity: 1;
+      border: 2px solid $black;
+      @include transition(all $hover-in ease-out);
+    }
+    &:nth-child(n+3) {
+      display: none;
+      @include media($medium-up) {
+        display: block;
+      }
+    }
+  }
+}
