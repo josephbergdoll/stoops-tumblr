@@ -96,7 +96,8 @@
           {/block:IfPinnedContentButtonURL}
         {block:IfShowInstagram}
         .instagram-wrap
-          %h5.center Instagram
+          %h5.center
+            %a{:href => "http://www.instagram.com/stoopsmag", :target => "new"} Follow @StoopsMag on Instagram
           #instagram.clearfix
         {/block:IfShowInstagram}
         .blog-heading
