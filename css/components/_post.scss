@@ -1,7 +1,13 @@
 .single-post {
-  margin: 0 auto 2rem;
+  padding-top: 1rem;
+  border-top: $standard-border;
+  margin: 0 auto 4rem;
   @include media($large-up) {
-    margin: 0 auto 3rem;
+    margin: 0 auto 6rem;
+  }
+  &:first-of-type {
+    padding-top: 0;
+    border-top: 0;
   }
   
   .post-inner {

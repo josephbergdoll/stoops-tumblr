@@ -128,9 +128,28 @@ h6 {
 
 .text-post-body, .caption-post-body {
   ol {
+    font-family: $serif;
     list-style-type: decimal;
     padding-left: 1.25rem;
+    margin-left: 1rem;
     margin-bottom: 1rem;
+  }
+  ul {
+    font-family: $serif;
+    list-style-type: disc;
+    padding-left: 1.25rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+  em {
+    font-style: italic;
+  }
+a {
+    border-bottom: $border-black;
+    @include transition(all $hover-out ease-out);
+    &:hover {
+      border-bottom: $border-trans;
+    }
   }
 }
 
@@ -149,15 +168,17 @@ p {
   &:last-of-type {
     margin-bottom: 0;
   }
-  .text-post-body:not(.img-only) & { 
+  .text-post-body:not(.img-only) & {
     &:first-of-type {
       color: $light-black;
       font-size: 1rem;
       @include media($medium-up) {
         font-size: 1.125rem;
+        max-width: 53rem;
       }
       @include media($large-up) {
         font-size: 1.25rem;
+        max-width: 60rem;
       }
     }
     &.img-only {

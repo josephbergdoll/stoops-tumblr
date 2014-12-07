@@ -11,6 +11,11 @@ $(document).ready(function() {
     }
   });
 
+  var windowTop = $(window).scrollTop();
+  if (windowTop >= $('.blog').offset().top) {
+    $('.page-index .header-bg').addClass('fade-in');
+  }
+
   // Open Nav
   $('.link-to-nav').click(function(e) {
     var wrapperHeight = $('.main-nav .nav-inner').outerHeight();
@@ -79,7 +84,6 @@ $(document).ready(function() {
   setTimeout(function() {
     $('.splash-logo').addClass('show');
     svg.draw(function() {
-      console.log('Animation finished');
       setTimeout(function() {
         $('.splash-logo').addClass('finished');
       },100);
