@@ -42,7 +42,7 @@
   %script{:src => "https://www.dropbox.com/s/efmxwdr7xqlewla/plugins-min.js?dl=1", :type => "text/javascript"}
   %script{:src => "https://www.dropbox.com/s/6uj4trpzwh2c7yg/scripts-min.js?dl=1", :type => "text/javascript"}
 
-%body{:class => "{block:IndexPage}page-index{/block:IndexPage} page-{CurrentPage} {block:PermalinkPage}page-permalink{/block:PermalinkPage}"}
+%body{:class => "{block:IndexPage}page-index{/block:IndexPage} page-{CurrentPage} {block:TagPage}page-tag{/block:TagPage} {block:PermalinkPage}page-permalink{/block:PermalinkPage}"}
   {block:IndexPage}
   .splash
     .splash-inner.vertical-align-wrap
@@ -271,14 +271,12 @@
               {/block:Caption}
 
               {/block:Video}
-          
+            {block:Date}
             .post-meta.clearfix
               .post-meta-left
-                {block:Date}
                 .post-date
                   %h5.date-time 
                     %a.date-link{:href => "{Permalink}"} {ShortMonth} {DayOfMonth} {Year} - {12Hour}:{Minutes}{AmPm}
-                {/block:Date}
                 {block:HasTags}
                 .post-tags
                   %h5.tags
@@ -294,6 +292,7 @@
               .post-interact
                 {ReblogButton color="black"}
                 {LikeButton color="black"}
+            {/block:Date}
           
           {/block:Posts}
           {block:Pagination}

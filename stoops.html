@@ -34,7 +34,7 @@
   <script src='https://www.dropbox.com/s/efmxwdr7xqlewla/plugins-min.js?dl=1' type='text/javascript'></script>
   <script src='https://www.dropbox.com/s/6uj4trpzwh2c7yg/scripts-min.js?dl=1' type='text/javascript'></script>
 </head>
-<body class='{block:IndexPage}page-index{/block:IndexPage} page-{CurrentPage} {block:PermalinkPage}page-permalink{/block:PermalinkPage}'>
+<body class='{block:IndexPage}page-index{/block:IndexPage} page-{CurrentPage} {block:TagPage}page-tag{/block:TagPage} {block:PermalinkPage}page-permalink{/block:PermalinkPage}'>
   {block:IndexPage}
   <div class='splash'>
     <div class='splash-inner vertical-align-wrap'>
@@ -296,15 +296,14 @@
               {/block:Caption}
               {/block:Video}
             </div>
+            {block:Date}
             <div class='post-meta clearfix'>
               <div class='post-meta-left'>
-                {block:Date}
                 <div class='post-date'>
                   <h5 class='date-time'>
                     <a class='date-link' href='{Permalink}'>{ShortMonth} {DayOfMonth} {Year} - {12Hour}:{Minutes}{AmPm}</a>
                   </h5>
                 </div>
-                {/block:Date}
                 {block:HasTags}
                 <div class='post-tags'>
                   <h5 class='tags'>
@@ -326,6 +325,7 @@
                 {LikeButton color="black"}
               </div>
             </div>
+            {/block:Date}
           </article>
           {/block:Posts}
           {block:Pagination}

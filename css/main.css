@@ -559,13 +559,13 @@ p {
       display: block; } }
 
 @media screen and (min-width: 768px) {
-  .page-index.page-1 .blog {
+  .page-index.page-1:not(.page-tag) .blog {
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
     background: white; }
-    .page-index.page-1 .blog.static {
+    .page-index.page-1:not(.page-tag) .blog.static {
       position: static;
       top: 0; } }
 
@@ -716,7 +716,7 @@ p {
     .splash .splash-logo.show {
       opacity: 1; }
   @media screen and (min-width: 768px) {
-    .page-1 .splash {
+    .page-1:not(.page-tag) .splash {
       display: block; } }
 
 .header-main {
@@ -738,7 +738,7 @@ p {
     -webkit-animation-delay: 0s;
     -moz-animation-delay: 0s;
     animation-delay: 0s; }
-    .page-index.page-1 .header-main .header-bg {
+    .page-index.page-1:not(.page-tag) .header-main .header-bg {
       opacity: 0; }
     .header-main .header-bg.show-bg {
       opacity: 1; }

@@ -16,7 +16,7 @@
     height: 100%;
     z-index: 0;
     @include animation-delay(0s);
-    .page-index.page-1 & {
+    .page-index.page-1:not(.page-tag) & {
       opacity: 0;
     }
     &.show-bg {
