@@ -34,7 +34,7 @@
   <script src='https://www.dropbox.com/s/efmxwdr7xqlewla/plugins-min.js?dl=1' type='text/javascript'></script>
   <script src='https://www.dropbox.com/s/6uj4trpzwh2c7yg/scripts-min.js?dl=1' type='text/javascript'></script>
 </head>
-<body class='{block:IndexPage}page-index{/block:IndexPage} {block:PermalinkPage}page-permalink{/block:PermalinkPage}'>
+<body class='{block:IndexPage}page-index{/block:IndexPage} page-{CurrentPage} {block:PermalinkPage}page-permalink{/block:PermalinkPage}'>
   {block:IndexPage}
   <div class='splash'>
     <div class='splash-inner vertical-align-wrap'>
@@ -332,18 +332,20 @@
           <div class='pagination-block pagination-bottom clearfix'>
             <div class='pagination-numbers'></div>
             <h5>{CurrentPage} / {TotalPages}</h5>
-            <div class='pagination-nextprev'>
-              {block:PreviousPage}
+            {block:PreviousPage}
+            <div class='pagination-prev'>
               <h5>
                 <a class='nav-link' href='{PreviousPage}'>Prev</a>
               </h5>
-              {/block:PreviousPage}
-              {block:NextPage}
+            </div>
+            {/block:PreviousPage}
+            {block:NextPage}
+            <div class='pagination-next'>
               <h5>
                 <a href='{NextPage}'>Next</a>
               </h5>
-              {/block:NextPage}
             </div>
+            {/block:NextPage}
           </div>
           {/block:Pagination}
         </div>

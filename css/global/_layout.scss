@@ -135,7 +135,7 @@
   }
 }
 
-.page-index .blog {
+.page-index.page-1 .blog {
   @include media($medium-up) {
     position: absolute;
     top: 100%;

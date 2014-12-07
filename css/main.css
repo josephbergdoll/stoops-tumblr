@@ -559,13 +559,13 @@ p {
       display: block; } }
 
 @media screen and (min-width: 768px) {
-  .page-index .blog {
+  .page-index.page-1 .blog {
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
     background: white; }
-    .page-index .blog.static {
+    .page-index.page-1 .blog.static {
       position: static;
       top: 0; } }
 
@@ -627,9 +627,6 @@ p {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
-  @media screen and (min-width: 768px) {
-    .splash {
-      display: block; } }
   .splash .vertical-align {
     -webkit-animation-delay: 500ms;
     -moz-animation-delay: 500ms;
@@ -718,6 +715,9 @@ p {
       transition: all 800ms ease-out; }
     .splash .splash-logo.show {
       opacity: 1; }
+  @media screen and (min-width: 768px) {
+    .page-1 .splash {
+      display: block; } }
 
 .header-main {
   position: relative;
@@ -735,10 +735,11 @@ p {
     width: 100%;
     height: 100%;
     z-index: 0;
-    opacity: 0;
     -webkit-animation-delay: 0s;
     -moz-animation-delay: 0s;
     animation-delay: 0s; }
+    .page-index.page-1 .header-main .header-bg {
+      opacity: 0; }
     .header-main .header-bg.show-bg {
       opacity: 1; }
   .header-main .wrapper {
@@ -876,15 +877,18 @@ p {
   background: #f3f3f3; }
   .pagination-block h5 {
     line-height: 1; }
-  .pagination-block .pagination-nextprev {
+  .pagination-block .pagination-prev {
+    position: absolute;
+    top: 0;
+    left: 0.4rem; }
+    .pagination-block .pagination-prev h5 {
+      display: inline-block; }
+  .pagination-block .pagination-next {
     position: absolute;
     top: 0;
     right: 0.4rem; }
-    .pagination-block .pagination-nextprev h5 {
-      display: inline-block;
-      margin-right: 1rem; }
-      .pagination-block .pagination-nextprev h5:last-of-type {
-        margin-right: 0; }
+    .pagination-block .pagination-next h5 {
+      display: inline-block; }
 
 .main-nav {
   height: 0;

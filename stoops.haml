@@ -42,7 +42,7 @@
   %script{:src => "https://www.dropbox.com/s/efmxwdr7xqlewla/plugins-min.js?dl=1", :type => "text/javascript"}
   %script{:src => "https://www.dropbox.com/s/6uj4trpzwh2c7yg/scripts-min.js?dl=1", :type => "text/javascript"}
 
-%body{:class => "{block:IndexPage}page-index{/block:IndexPage} {block:PermalinkPage}page-permalink{/block:PermalinkPage}"}
+%body{:class => "{block:IndexPage}page-index{/block:IndexPage} page-{CurrentPage} {block:PermalinkPage}page-permalink{/block:PermalinkPage}"}
   {block:IndexPage}
   .splash
     .splash-inner.vertical-align-wrap
@@ -300,15 +300,16 @@
           .pagination-block.pagination-bottom.clearfix
             .pagination-numbers
             %h5 {CurrentPage} / {TotalPages}
-            .pagination-nextprev
-              {block:PreviousPage}
+            {block:PreviousPage}
+            .pagination-prev
               %h5
                 %a.nav-link{:href => "{PreviousPage}"} Prev
-              {/block:PreviousPage}
-              {block:NextPage}
+            {/block:PreviousPage}
+            {block:NextPage}
+            .pagination-next
               %h5
                 %a{:href => "{NextPage}"} Next
-              {/block:NextPage}
+            {/block:NextPage}
           {/block:Pagination}
 
     %footer

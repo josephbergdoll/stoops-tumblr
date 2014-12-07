@@ -8,16 +8,21 @@
     line-height: 1;
   }
 
-  .pagination-nextprev {
+  .pagination-prev {
+    position: absolute;
+    top: 0;
+    left: 0.4rem;
+    h5 {
+      display: inline-block;
+    }
+  }
+
+  .pagination-next {
     position: absolute;
     top: 0;
     right: 0.4rem;
     h5 {
       display: inline-block;
-      margin-right: 1rem;
-      &:last-of-type {
-        margin-right: 0;
-      }
     }
   }
 
