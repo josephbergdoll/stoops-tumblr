@@ -69,9 +69,9 @@
         .wrapper
           %nav.main-nav
             .nav-inner
+              {block:HasPages}
               .nav-item
                 %a{:href => "{BlogURL}", :title => "Blog"} Blog
-              {block:HasPages}
               {block:Pages}
               .nav-item
                 %a{:href => "{URL}", :title => "{Label}"} {Label}
