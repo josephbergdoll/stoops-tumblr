@@ -38,10 +38,17 @@
       float: left;
     }
   }
+
+  .post-date {
+    @include media($large-up) {
+      border-right: 0;
+    }
+  }
   
   .post-tags {
     @include media($large-up) {
       width: 80%;
+      border-right: $standard-border;
     }
     a {
       margin-right: 0.25rem;

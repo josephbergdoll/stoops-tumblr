@@ -1012,8 +1012,12 @@ p {
       .single-post .post-date, .single-post .post-tags, .single-post .post-notes {
         float: left; } }
   @media screen and (min-width: 1024px) {
+    .single-post .post-date {
+      border-right: 0; } }
+  @media screen and (min-width: 1024px) {
     .single-post .post-tags {
-      width: 80%; } }
+      width: 80%;
+      border-right: 1px solid rgba(0, 0, 0, 0.1); } }
   .single-post .post-tags a {
     margin-right: 0.25rem; }
     .single-post .post-tags a:last-of-type {
