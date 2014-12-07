@@ -40,6 +40,9 @@
   }
   
   .post-tags {
+    @include media($large-up) {
+      width: 80%;
+    }
     a {
       margin-right: 0.25rem;
       &:last-of-type {
