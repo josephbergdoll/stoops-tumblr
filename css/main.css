@@ -72,20 +72,20 @@ html {
 
 @font-face {
   font-family: 'Stoops-Basetica';
-  src: url("http://stoops.jsph.us/f/sans.eot");
-  src: local("☺"), url("http://stoops.jsph.us/f/sans.woff") format("woff"), url("http://stoops.jsph.us/f/sans.ttf") format("truetype"), url("http://stoops.jsph.us/f/sans.svg") format("svg");
+  src: url("http://static.tumblr.com/hok4ran/zRCozh048/sans.eot");
+  src: local("☺"), url("http://static.tumblr.com/hok4ran/xvvozh04d/sans.woff") format("woff"), url("http://static.tumblr.com/hok4ran/9Kuozh04d/sans.ttf") format("truetype"), url("http://static.tumblr.com/hok4ran/EmWozh04c/sans.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'Stoops-Basetica';
-  src: url("http://stoops.jsph.us/f/sans.eot");
-  src: local("☺"), url("http://stoops.jsph.us/f/sans.woff") format("woff"), url("http://stoops.jsph.us/f/sans.ttf") format("truetype"), url("http://stoops.jsph.us/f/sans.svg") format("svg");
+  src: url("http://static.tumblr.com/hok4ran/zRCozh048/sans.eot");
+  src: local("☺"), url("http://static.tumblr.com/hok4ran/xvvozh04d/sans.woff") format("woff"), url("http://static.tumblr.com/hok4ran/9Kuozh04d/sans.ttf") format("truetype"), url("http://static.tumblr.com/hok4ran/EmWozh04c/sans.svg") format("svg");
   font-weight: 700;
   font-style: normal; }
 @font-face {
   font-family: 'Stoops-Basetica';
-  src: url("http://stoops.jsph.us/f/sans.eot");
-  src: local("☺"), url("http://stoops.jsph.us/f/sans.woff") format("woff"), url("http://stoops.jsph.us/f/sans.ttf") format("truetype"), url("http://stoops.jsph.us/f/sans.svg") format("svg");
+  src: url("http://static.tumblr.com/hok4ran/zRCozh048/sans.eot");
+  src: local("☺"), url("http://static.tumblr.com/hok4ran/xvvozh04d/sans.woff") format("woff"), url("http://static.tumblr.com/hok4ran/9Kuozh04d/sans.ttf") format("truetype"), url("http://static.tumblr.com/hok4ran/EmWozh04c/sans.svg") format("svg");
   font-weight: 300;
   font-style: normal; }
 @-webkit-keyframes loader {
@@ -462,10 +462,10 @@ p {
   -webkit-transition: padding 800ms ease-in-out;
   -moz-transition: padding 800ms ease-in-out;
   transition: padding 800ms ease-in-out; }
-  .wrapper:after {
+  .wrapper::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     .wrapper {
       padding: 0 2rem; } }
@@ -563,10 +563,10 @@ p {
     .pad-to-large {
       padding: 0; } }
 
-.clearfix:after {
+.clearfix::after {
+  clear: both;
   content: "";
-  display: table;
-  clear: both; }
+  display: table; }
 
 .link-card {
   display: block; }
@@ -642,7 +642,7 @@ p {
   width: 100%;
   height: 100%;
   position: fixed;
-  background-image: url("http://stoops.jsph.us/img/cover-3.jpg");
+  background-image: url("http://static.tumblr.com/hok4ran/Wzmozh0a3/cover-3.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
@@ -745,7 +745,7 @@ p {
     .header-main {
       padding-bottom: 3.5rem; } }
   .header-main .header-bg {
-    background: url("http://stoops.jsph.us/img/header-bg.jpg") no-repeat center bottom;
+    background: url("http://static.tumblr.com/hok4ran/sJoozh09b/header-bg.jpg") no-repeat center bottom;
     background-size: cover;
     position: absolute;
     top: 0;
@@ -1024,10 +1024,10 @@ p {
     float: left;
     width: 100%;
     padding-right: 3.6875rem; }
-    .single-post .post-meta-left:after {
+    .single-post .post-meta-left::after {
+      clear: both;
       content: "";
-      display: table;
-      clear: both; }
+      display: table; }
   .single-post .post-date, .single-post .post-tags, .single-post .post-notes {
     margin: 0 1rem 0 0;
     border-right: 1px solid rgba(0, 0, 0, 0.1);
@@ -1116,10 +1116,10 @@ p {
 .single-post.photoset .slides {
   display: block;
   height: inherit; }
-  .single-post.photoset .slides:after {
+  .single-post.photoset .slides::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
   .single-post.photoset .slides li {
     width: 100%;
     height: 100%;
@@ -1133,16 +1133,16 @@ p {
   padding: 0.35rem;
   margin: 0 0 2rem;
   background: #f3f3f3; }
-  .single-post.photoset .photoset-controls:after {
+  .single-post.photoset .photoset-controls::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
 .single-post.photoset .slide-control-nav {
   float: right; }
-  .single-post.photoset .slide-control-nav:after {
+  .single-post.photoset .slide-control-nav::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
   .single-post.photoset .slide-control-nav li {
     float: left;
     font-size: 0.75rem;
